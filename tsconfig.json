@@ -1,0 +1,15 @@
+{
+	"module": "es6",
+	"noImplicitAny": false,
+	"compilerOptions": {
+		"sourceMap": false,
+		"target": "es2017",
+		"module": "esnext",
+		"moduleResolution": "node",
+		"esModuleInterop": true,
+		"lib": ["es2019", "dom"],
+		"resolveJsonModule": true
+	},
+	"root": ".",
+	"exclude": ["node_modules", "bin"]
+}
