@@ -6,7 +6,7 @@ app.whenReady().then(() => {
     const win = new BrowserWindow({
         title: resources.title,
         webPreferences: {
-            preload: path.resolve(__dirname, "preload.ts")
+            preload: path.resolve(__dirname, "preload.js")
         } 
     })
 })
