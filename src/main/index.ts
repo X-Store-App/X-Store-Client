@@ -6,7 +6,9 @@ app.whenReady().then(() => {
     const win = new BrowserWindow({
         title: resources.title,
         webPreferences: {
-            preload: path.resolve(__dirname, "preload.js")
+            preload: path.resolve(__dirname, "preload.js"),
+            nodeIntegration: false,
+            enableRemoteModule: false
         } 
     })
 })
