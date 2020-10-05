@@ -3,11 +3,11 @@ const HtmlWebpackPlugin = require("webpack-html-plugin")
 const resources = require("../config/resources.json")
 
 module.exports = [{
-    mode: process.env.NODE_ENV,
-    target: "renderer",
-    entry: path.resolve(__dirname, "../", "src", "interface", "index.ts"),
+    mode: /*process.env.NODE_ENV*/"none", //TODO: Set NODE_ENV in the cmd 
+    target: "electron-renderer",
+    entry: "./src/main/index.ts",
     output: {
-        path: path.resolve(__dirname, "bin"),
+        path: path.resolve(__dirname, "../", "bin"),
         filename: "ui.js"
     },
     module: {
