@@ -7,8 +7,8 @@
   "author": "XStore",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server",
-    "package": "yarn webpack:bundle",
+    "start": "webpack-dev-server && yarn dlx @electron-forge/cli start",
+    "package": "yarn webpack:bundle && yarn dlx @electron-forge/cli make",
     "webpack:bundle": "webpack --config config/webpack.config.js"
   },
   "devDependencies": {
