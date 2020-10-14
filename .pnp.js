@@ -38,6 +38,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",
           "packageDependencies": [
             ["@babel/core", "npm:7.11.6"],
+            ["@xstoreapp/api", "npm:1.0.0"],
             ["devtron", "npm:1.4.0"],
             ["electron", "npm:10.1.3"],
             ["electron-builder", "npm:22.9.1"],
@@ -650,6 +651,16 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@webassemblyjs/ast", "npm:1.9.0"],
             ["@webassemblyjs/wast-parser", "npm:1.9.0"],
             ["@xtuc/long", "npm:4.2.2"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
+      ["@xstoreapp/api", [
+        ["npm:1.0.0", {
+          "packageLocation": "./.yarn/cache/@xstoreapp-api-npm-1.0.0-eb075c6701-f823e352e1.zip/node_modules/@xstoreapp/api/",
+          "packageDependencies": [
+            ["@xstoreapp/api", "npm:1.0.0"],
+            ["node-fetch", "npm:2.6.1"]
           ],
           "linkType": "HARD",
         }]
@@ -5715,6 +5726,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD",
         }]
       ]],
+      ["node-fetch", [
+        ["npm:2.6.1", {
+          "packageLocation": "./.yarn/cache/node-fetch-npm-2.6.1-46c670dbc1-cbb171635e.zip/node_modules/node-fetch/",
+          "packageDependencies": [
+            ["node-fetch", "npm:2.6.1"]
+          ],
+          "linkType": "HARD",
+        }]
+      ]],
       ["node-forge", [
         ["npm:0.10.0", {
           "packageLocation": "./.yarn/cache/node-forge-npm-0.10.0-605ba7b28b-c7a729933a.zip/node_modules/node-forge/",
@@ -9025,6 +9045,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [
             ["xstore-electron-client", "workspace:."],
             ["@babel/core", "npm:7.11.6"],
+            ["@xstoreapp/api", "npm:1.0.0"],
             ["devtron", "npm:1.4.0"],
             ["electron", "npm:10.1.3"],
             ["electron-builder", "npm:22.9.1"],
