@@ -1,5 +1,6 @@
 import path from "path"
-import electron, { ipcMain, BrowserWindow, app } from "electron"
+/// @ts-expect-error
+import electron, { ipcMain, BrowserWindow, app, protocol } from "electron"
 import resources from '../../config/resources.json'
 
 app.whenReady().then(() => {
