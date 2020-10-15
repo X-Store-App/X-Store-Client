@@ -2220,6 +2220,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/electron@npm:^1.6.10":
+  version: 1.6.10
+  resolution: "@types/electron@npm:1.6.10"
+  dependencies:
+    electron: "*"
+  checksum: 7652ef7a46a517462ef60937c0ec6e7f5ad3489c92292ecbc79c38dd6b4149177eef82c7422021bb83f8e66530c64f4ed6ebee55e23136d444e3c66a51f51af2
+  languageName: node
+  linkType: hard
+
 "@types/eslint-visitor-keys@npm:^1.0.0":
   version: 1.0.0
   resolution: "@types/eslint-visitor-keys@npm:1.0.0"
@@ -6163,7 +6172,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"electron@npm:^10.1.3":
+"electron@npm:*, electron@npm:^10.1.3":
   version: 10.1.3
   resolution: "electron@npm:10.1.3"
   dependencies:
@@ -16978,6 +16987,7 @@ typescript@~3.7.2:
   resolution: "xstore-electron-client@workspace:."
   dependencies:
     "@babel/core": ^7.11.6
+    "@types/electron": ^1.6.10
     "@xstoreapp/api": ^1.0.0
     "@xstoreapp/react-design": ^0.1.0
     devtron: ^1.4.0
