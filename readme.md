@@ -8,9 +8,9 @@
 
 *This project uses the XStore's Node API. Check its repo [here.](https://github.com/X-Store-App/api-cs) or (prefered way) you can download it from npm/yarn:*
 ```bash
-npm i @TODO:REPLACE_WITH_NPM_ACCOUNT/api
+npm i @xstoreapp/api
 # or
-yarn add @TODO:REPLACE_WITH_NPM_ACCOUNT/api
+yarn add @xstoreapp/api
 ```
 
 ## Available scripts
