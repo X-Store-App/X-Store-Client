@@ -40,7 +40,7 @@ module.exports = [{
     target: "electron-main",
     entry: "./src/main/index.ts",
     output: {
-        path: path.resolve(__dirname, "bin"),
+        path: path.resolve(__dirname, "../", "bin"),
         filename: "main.js"
     },
     node: {
