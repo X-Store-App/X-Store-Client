@@ -11,7 +11,7 @@
   "author": "XStore",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server && electron .",
+    "start": "webpack-dev-server --config config/webpack.config.js && electron .",
     "package": "npm run webpack:bundle && npm run package:electron:windows",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
