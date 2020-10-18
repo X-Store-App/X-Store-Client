@@ -1,5 +1,5 @@
 const path = require("path")
-const HtmlWebpackPlugin = require("webpack-html-plugin")
+const HtmlWebpackPlugin = require("html-webpack-plugin")
 const resources = require("../config/resources.json")
 
 module.exports = [{
@@ -32,7 +32,8 @@ module.exports = [{
     plugins: [
         new HtmlWebpackPlugin({
             title: resources.title,
-            template: path.resolve(__dirname, "../", "src", "interface", "index.html")
+            template: path.resolve(__dirname, "../", "src", "interface", "index.html"),
+            filename: "index.html"
         })
     ]
 }, {
