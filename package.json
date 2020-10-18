@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "start": "webpack-dev-server && electron .",
-    "package": "yarn webpack:bundle && yarn package:electron:windows",
+    "package": "npm run webpack:bundle && npm run package:electron:windows",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
     "package:electron:darwin": "electron-builder -m",
