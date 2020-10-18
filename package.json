@@ -33,6 +33,6 @@
   },
   "dependencies": {
     "@xstoreapp/api": "^1.0.0",
-    "@xstoreapp/react-design": "^0.1.0"
+    "@xstoreapp/react-design": "^0.1.2"
   }
 }
