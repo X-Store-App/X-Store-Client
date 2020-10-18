@@ -10,8 +10,11 @@
   "author": "XStore",
   "license": "MIT",
   "scripts": {
-    "start": "webpack-dev-server && yarn dlx @electron-forge/cli start",
-    "package": "yarn webpack:bundle && yarn dlx @electron-forge/cli make",
+    "start": "webpack-dev-server && electron .",
+    "package": "yarn webpack:bundle && yarn package:electron:windows",
+    "package:electron:windows": "electron-builder -w",
+    "package:electron:linux": "electron-builder -l",
+    "package:electron:darwin": "electron-builder -m",
     "webpack:bundle": "webpack --config config/webpack.config.js"
   },
   "devDependencies": {
