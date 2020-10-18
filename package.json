@@ -3,6 +3,7 @@
     "appId": "com.xstore.client"
   },
   "name": "xstore-electron-client",
+  "productName": "XStore Client",
   "version": "1.0.0",
   "description": "Client for XStore",
   "main": "main.js",
