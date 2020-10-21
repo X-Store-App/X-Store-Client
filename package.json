@@ -12,7 +12,7 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build:webpack:main && run-p script:build watch:webpack:renderer watch:electron",
-    "package": "run-p watch:webpack package:electron:windows",
+    "package": "run-p build:webpack package:electron:windows",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
     "package:electron:darwin": "electron-builder -m",
