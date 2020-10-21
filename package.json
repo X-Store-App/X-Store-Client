@@ -11,14 +11,17 @@
   "author": "XStore",
   "license": "MIT",
   "scripts": {
-    "start": "run-p webpack:live electron:start",
+    "start": "npm run build:webpack:main && run-p script:build watch:webpack:renderer watch:electron",
     "package": "run-p webpack:bundle package:electron:windows",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
     "package:electron:darwin": "electron-builder -m",
     "electron:start": "electron .",
-    "webpack:bundle": "webpack --config config/webpack.config.js",
-    "webpack:live": "webpack-dev-server -- config/webpack.config.js"
+    "build:webpack": "webpack --config webpack.config.js --mode=production",
+		"build:webpack:test": "webpack --config webpack.config.js --mode=production --env.NODE_ENV=test",
+		"build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
+		"watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
+    "webpack:live": "webpack-dev-server --webpack.config.js"
   },
   "devDependencies": {
     "@babel/core": "^7.11.6",

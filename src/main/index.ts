@@ -1,6 +1,6 @@
 import path from "path"
 import electron, { ipcMain, BrowserWindow, app, protocol } from "electron"
-import resources from '../../config/resources.json'
+import resources from '../../resources.json'
 
 app.whenReady().then(() => {
     protocol.registerFileProtocol('xstore', (request, callback) => {

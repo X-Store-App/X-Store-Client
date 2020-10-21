@@ -1,4 +1,5 @@
 {
+	"files": ["src/interface/index.ts"],
 	"module": "es6",
 	"noImplicitAny": false,
 	"compilerOptions": {

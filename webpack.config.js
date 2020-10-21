@@ -1,9 +1,9 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const resources = require("../config/resources.json")
+const resources = require("../resources.json")
 
 module.exports = [{
-    mode: /*process.env.NODE_ENV*/"none", //TODO: Set NODE_ENV in the cmd 
+    mode: process.env.NODE_ENV,
     target: "electron-renderer",
     entry: "./src/main/index.ts",
     output: {
@@ -52,7 +52,10 @@ module.exports = [{
             {
                 test: /\.ts(x)$/,
                 use: "babel-loader",
-                exclude: path.resolve(__dirname, "node_modules")
+                exclude: path.resolve(__dirname, "node_modules"),
+                options: {
+                    configFile: path.resolve(process.cwd(), "main.tsconfig.json")
+                }
             }
         ]
     },
@@ -61,4 +64,35 @@ module.exports = [{
             ".js", ".ts"
         ]
     }
+}, {
+		name: 'preload',
+		mode: process.env.NODE_ENV,
+		optimization: {
+			minimize: true,
+		},
+		entry: {
+			index: "./src/main/preload.ts",
+		},
+		resolve: {
+			extensions: ['.js', '.ts'],
+		},
+		module: {
+			rules: [
+				{
+					test: /\.tsx?$/,
+					loader: 'ts-loader',
+					options: {
+						configFile: path.resolve(process.cwd(), './preload.tsconfig.json'),
+					},
+					exclude: [path.resolve(__dirname, './node_modules')],
+				},
+			],
+		},
+		target: 'electron-main',
+		externals: ['fs-extra', 'electron', 'path'],
+		output: {
+			filename: 'preload.js',
+			path: path.resolve(__dirname, '../', 'bin'),
+			libraryTarget: 'umd',
+	    },
 }]
