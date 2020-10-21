@@ -1,5 +1,4 @@
 import path from "path"
-/// @ts-expect-error
 import electron, { ipcMain, BrowserWindow, app, protocol } from "electron"
 import resources from '../../config/resources.json'
 
