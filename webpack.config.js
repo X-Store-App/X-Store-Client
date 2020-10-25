@@ -1,6 +1,6 @@
 const path = require("path")
 const HtmlWebpackPlugin = require("html-webpack-plugin")
-const resources = require("../resources.json")
+const resources = require("./resources.json")
 
 module.exports = [{
     mode: process.env.NODE_ENV,
