@@ -18,9 +18,9 @@
     "package:electron:darwin": "electron-builder -m",
     "electron:start": "electron .",
     "build:webpack": "webpack --config webpack.config.js --mode=production",
-		"build:webpack:test": "webpack --config webpack.config.js --mode=production --env.NODE_ENV=test",
-		"build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
-		"watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
+    "build:webpack:test": "webpack --config webpack.config.js --mode=production --env.NODE_ENV=test",
+    "build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
+    "watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
     "webpack:live": "webpack-dev-server --webpack.config.js"
   },
   "devDependencies": {
