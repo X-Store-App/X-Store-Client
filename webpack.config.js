@@ -7,7 +7,7 @@ module.exports = [{
     target: "electron-renderer",
     entry: "./src/main/index.ts",
     output: {
-        path: path.resolve(__dirname, "../", "bin"),
+        path: path.resolve(__dirname, "bin"),
         filename: "ui.js"
     },
     module: {
@@ -15,12 +15,12 @@ module.exports = [{
             {
                 test: /\.ts(x)$/,
                 use: "babel-loader",
-                exclude: path.resolve(__dirname, "../", "node_modules")
+                exclude: path.resolve(__dirname, "node_modules")
             },
             {
                 test: /\.s(cs)ss$/,
                 use: "sass-loader",
-                exclude: path.resolve(__dirname, "../", "node_modules")
+                exclude: path.resolve(__dirname, "node_modules")
             }
         ]
     },
@@ -32,7 +32,7 @@ module.exports = [{
     plugins: [
         new HtmlWebpackPlugin({
             title: resources.title,
-            template: path.resolve(__dirname, "../", "src", "interface", "index.html"),
+            template: path.resolve(__dirname, "src", "interface", "index.html"),
             filename: "index.html"
         })
     ]
@@ -42,7 +42,7 @@ module.exports = [{
     target: "electron-main",
     entry: "./src/main/index.ts",
     output: {
-        path: path.resolve(__dirname, "../", "bin"),
+        path: path.resolve(__dirname, "bin"),
         filename: "main.js"
     },
     node: {
@@ -93,7 +93,7 @@ module.exports = [{
 		externals: ['fs-extra', 'electron', 'path'],
 		output: {
 			filename: 'preload.js',
-			path: path.resolve(__dirname, '../', 'bin'),
+			path: path.resolve(__dirname, 'bin'),
 			libraryTarget: 'umd',
 	    },
 }]
