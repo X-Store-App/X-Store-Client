@@ -37,6 +37,7 @@ module.exports = [{
         })
     ]
 }, {
+    name: "main",
     mode: process.env.NODE_ENV,
     target: "electron-main",
     entry: "./src/main/index.ts",
