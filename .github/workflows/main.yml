@@ -2,7 +2,7 @@ name: CI
 
 on:
   push:
-    branches: [ main ]
+    branches: [ main, dev ]
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -14,4 +14,4 @@ jobs:
         run: npm i
 
       - name: Build and deploy
-        run: npm run webpack:bundle
+        run: npm run package
