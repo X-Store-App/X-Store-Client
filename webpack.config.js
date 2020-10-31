@@ -13,7 +13,7 @@ module.exports = [{
     module: {
         rules: [
             {
-                test: /\.ts(x)$/,
+                test: /\.(tj)s(x)$/,
                 use: "babel-loader",
                 exclude: path.resolve(__dirname, "node_modules")
             },
