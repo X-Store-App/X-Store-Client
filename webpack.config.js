@@ -40,7 +40,6 @@ module.exports = [{
     name: "main",
     mode: process.env.NODE_ENV,
     target: "electron-main",
-    name: "main",
     entry: "./src/main/index.ts",
     output: {
         path: path.resolve(__dirname, "bin"),
