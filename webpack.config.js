@@ -80,11 +80,8 @@ module.exports = [{
 		module: {
 			rules: [
 				{
-					test: /\.tsx?$/,
+					test: /\.ts$/,
 					loader: 'ts-loader',
-					options: {
-						configFile: path.resolve(process.cwd(), './preload.tsconfig.json'),
-					},
 					exclude: [path.resolve(__dirname, './node_modules')],
 				},
 			],
