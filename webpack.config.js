@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require("html-webpack-plugin")
 const resources = require("./resources.json")
 
 module.exports = [{
+    name: "renderer",
     mode: process.env.NODE_ENV,
     target: "electron-renderer",
     entry: "./src/main/index.ts",
