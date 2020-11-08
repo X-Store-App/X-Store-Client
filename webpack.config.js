@@ -51,7 +51,7 @@ module.exports = [{
     rules: [
       {
         test: /\.ts$/,
-        use: 'babel-loader',
+        use: 'ts-loader',
         exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
