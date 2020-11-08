@@ -68,13 +68,13 @@ module.exports = [{
   name: 'preload',
   mode: process.env.NODE_ENV,
   optimization: {
-    minimize: true,
+    minimize: true
   },
   entry: {
     index: './src/main/preload.ts',
   },
   resolve: {
-    extensions: ['.js', '.ts'],
+    extensions: ['.js', '.ts']
   },
   module: {
     rules: [
