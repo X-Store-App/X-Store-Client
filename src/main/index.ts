@@ -1,6 +1,5 @@
 import path from 'path'
 import { BrowserWindow, app, protocol, Menu, dialog } from 'electron'
-import resources from '../../resources.json'
 import isDev from 'electron-is-dev'
 
 app.whenReady().then(() => {
@@ -8,7 +7,7 @@ app.whenReady().then(() => {
 
   })
   const win = new BrowserWindow({
-    title: resources.title,
+    title: 'XStore v' + app.getVersion(),
     webPreferences: {
       preload: path.resolve(__dirname, 'preload.js'),
       nodeIntegration: false,

@@ -1,6 +1,5 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-const resources = require('./resources.json')
 
 module.exports = [{
   name: 'preload',
@@ -85,7 +84,7 @@ module.exports = [{
   },
   plugins: [
     new HtmlWebpackPlugin({
-      title: resources.title,
+      title: 'XStore',
       template: path.resolve(__dirname, 'src', 'interface', 'index.html'),
       filename: 'index.html'
     })
