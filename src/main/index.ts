@@ -1,5 +1,5 @@
 import path from 'path'
-import { BrowserWindow, app, protocol, Menu, dialog } from 'electron'
+import { BrowserWindow, app, protocol, Menu, dialog, shell } from 'electron'
 import isDev from 'electron-is-dev'
 
 app.whenReady().then(() => {
@@ -35,6 +35,27 @@ app.whenReady().then(() => {
     {
       label: 'Help',
       submenu: [
+        {
+          label: 'Website',
+          click () {
+            shell.openExternal('https://web.xstore.vercel.app')
+          }
+        },
+        {
+          label: 'GitHub',
+          click () {
+            shell.openExternal('https://github.com/X-Store-App/')
+          }
+        },
+        {
+          label: 'Discord',
+          click () {
+            shell.openExternal('https://discord.gg/ByDn5PX')
+          }
+        },
+        {
+          type: 'separator'
+        },
         {
           label: 'About',
           click () {
