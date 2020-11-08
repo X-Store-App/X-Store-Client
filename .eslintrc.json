@@ -22,5 +22,13 @@
     "rules": {
         "semi": "error",
         "quotes": "error"
+    },
+    "settings": {
+        "react": {
+            "createClass": "createReactClass",
+            "pragma": "React",
+            "fragment": "Fragment",
+            "version": "detect"
+        }
     }
 }
