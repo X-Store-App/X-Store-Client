@@ -88,6 +88,9 @@ module.exports = [{
       template: path.resolve(__dirname, 'src', 'interface', 'index.html'),
       filename: 'index.html'
     })
-  ]
+  ],
+  devServer: {
+    port: 3000
+  }
 }
 ]
