@@ -3,6 +3,61 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const resources = require('./resources.json')
 
 module.exports = [{
+  name: 'preload',
+  mode: process.env.NODE_ENV,
+  optimization: {
+    minimize: true
+  },
+  entry: {
+    index: './src/main/preload.ts'
+  },
+  resolve: {
+    extensions: ['.js', '.ts']
+  },
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        loader: 'ts-loader',
+        exclude: [path.resolve(__dirname, './node_modules')]
+      }
+    ]
+  },
+  target: 'electron-main',
+  externals: ['fs-extra', 'electron', 'path'],
+  output: {
+    filename: 'preload.js',
+    path: path.resolve(__dirname, 'bin'),
+    libraryTarget: 'umd'
+  }
+}, {
+  name: 'main',
+  mode: process.env.NODE_ENV,
+  target: 'electron-main',
+  entry: './src/main/index.ts',
+  output: {
+    path: path.resolve(__dirname, 'bin'),
+    filename: 'main.js'
+  },
+  node: {
+    __dirname: true
+  },
+  module: {
+    rules: [
+      {
+        test: /\.ts$/,
+        use: 'ts-loader',
+        exclude: path.resolve(__dirname, 'node_modules')
+      }
+    ]
+  },
+  resolve: {
+    extensions: [
+      '.js', '.ts', '.jsx', '.tsx'
+    ]
+  }
+},
+{
   name: 'renderer',
   mode: process.env.NODE_ENV,
   target: 'electron-renderer',
@@ -35,59 +90,5 @@ module.exports = [{
       filename: 'index.html'
     })
   ]
-}, {
-  name: 'main',
-  mode: process.env.NODE_ENV,
-  target: 'electron-main',
-  entry: './src/main/index.ts',
-  output: {
-    path: path.resolve(__dirname, 'bin'),
-    filename: 'main.js'
-  },
-  node: {
-    __dirname: true
-  },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: path.resolve(__dirname, 'node_modules')
-      }
-    ]
-  },
-  resolve: {
-    extensions: [
-      '.js', '.ts', '.jsx', '.tsx'
-    ]
-  }
-}, {
-  name: 'preload',
-  mode: process.env.NODE_ENV,
-  optimization: {
-    minimize: true
-  },
-  entry: {
-    index: './src/main/preload.ts'
-  },
-  resolve: {
-    extensions: ['.js', '.ts']
-  },
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        loader: 'ts-loader',
-        exclude: [path.resolve(__dirname, './node_modules')]
-      }
-    ]
-  },
-  target: 'electron-main',
-  externals: ['fs-extra', 'electron', 'path'],
-  output: {
-    filename: 'preload.js',
-    path: path.resolve(__dirname, 'bin'),
-    libraryTarget: 'umd'
-  }
 }
 ]

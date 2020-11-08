@@ -12,7 +12,9 @@
   "license": "MIT",
   "scripts": {
     "start": "npm run build:webpack:main && run-p watch:webpack:renderer watch:electron",
-    "package": "run-p build:webpack package:electron:windows",
+    "package:windows": "run-p build:webpack package:electron:windows",
+    "package:darwin": "run-p build:webpack package:electron:darwin",
+    "package:linux": "run-p build:webpack package:electron:linux",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
     "package:electron:darwin": "electron-builder -m",
@@ -20,9 +22,9 @@
     "build:webpack": "webpack --config webpack.config.js --mode=production",
     "build:webpack:test": "webpack --config webpack.config.js --mode=production --env.NODE_ENV=test",
     "build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
+    "build:webpack:renderer": "webpack --config webpack.config.js --mode=production --config-name renderer",
     "watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
     "watch:electron": "electron .",
-    "webpack:live": "webpack-dev-server --webpack.config.js",
     "lint": "eslint ./**"
   },
   "devDependencies": {
