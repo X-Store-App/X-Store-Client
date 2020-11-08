@@ -52,10 +52,7 @@ module.exports = [{
       {
         test: /\.ts$/,
         use: 'babel-loader',
-        exclude: path.resolve(__dirname, 'node_modules'),
-        options: {
-          configFile: path.resolve(process.cwd(), 'main.tsconfig.json')
-        }
+        exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
   },
