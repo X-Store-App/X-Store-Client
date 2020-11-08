@@ -18,6 +18,7 @@ module.exports = [{
       {
         test: /\.ts$/,
         loader: 'ts-loader',
+        include: path.resolve(__dirname, 'src', 'main'),
         exclude: [path.resolve(__dirname, './node_modules')]
       }
     ]
@@ -46,6 +47,7 @@ module.exports = [{
       {
         test: /\.ts$/,
         use: 'ts-loader',
+        include: path.resolve(__dirname, 'src', 'main'),
         exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
@@ -70,6 +72,7 @@ module.exports = [{
       {
         test: /\.(tj)s(x)$/,
         use: 'ts-loader',
+        include: path.resolve(__dirname, 'src', 'interface'),
         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
