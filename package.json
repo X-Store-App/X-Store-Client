@@ -55,6 +55,7 @@
   },
   "dependencies": {
     "@xstoreapp/api": "^1.0.0",
-    "@xstoreapp/react-design": "^0.1.2"
+    "@xstoreapp/react-design": "^0.1.2",
+    "electron-is-dev": "1.2.0"
   }
 }
