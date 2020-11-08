@@ -71,7 +71,7 @@ module.exports = [{
     minimize: true
   },
   entry: {
-    index: './src/main/preload.ts',
+    index: './src/main/preload.ts'
   },
   resolve: {
     extensions: ['.js', '.ts']
@@ -81,7 +81,7 @@ module.exports = [{
       {
         test: /\.ts$/,
         loader: 'ts-loader',
-        exclude: [path.resolve(__dirname, './node_modules')],
+        exclude: [path.resolve(__dirname, './node_modules')]
       }
     ]
   },
