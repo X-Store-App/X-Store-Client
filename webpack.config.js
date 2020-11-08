@@ -69,7 +69,7 @@ module.exports = [{
     rules: [
       {
         test: /\.(tj)s(x)$/,
-        use: 'babel-loader',
+        use: 'ts-loader',
         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
@@ -80,7 +80,7 @@ module.exports = [{
     ]
   },
   resolve: {
-    extensions: ['.js', '.ts']
+    extensions: ['.js', '.ts', '.tsx', '.jsx']
   },
   plugins: [
     new HtmlWebpackPlugin({
