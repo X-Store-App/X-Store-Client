@@ -11,7 +11,8 @@ app.whenReady().then(() => {
     webPreferences: {
       preload: path.resolve(process.cwd(), 'bin', 'preload.js'),
       nodeIntegration: false,
-      enableRemoteModule: false
+      enableRemoteModule: false,
+      contextIsolation: true
     }
   })
   win.loadURL(
