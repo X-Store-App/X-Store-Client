@@ -6,7 +6,7 @@ app.whenReady().then(() => {
   protocol.registerFileProtocol('xstore', (request, callback) => {
 
   })
-  const win = new BrowserWindow({
+  const win: BrowserWindow = new BrowserWindow({
     title: 'XStore v' + app.getVersion(),
     webPreferences: {
       preload: path.resolve(process.cwd(), 'bin', 'preload.js'),
@@ -20,7 +20,7 @@ app.whenReady().then(() => {
       ? 'http://localhost:3000'
       : 'file://' + path.join(__dirname, 'index.html')
   )
-  const template = Menu.buildFromTemplate([
+  const template: Menu = Menu.buildFromTemplate([
     {
       role: 'fileMenu'
     },
