@@ -6,7 +6,7 @@
   "productName": "XStore Client",
   "version": "1.0.0",
   "description": "Client for XStore",
-  "main": "main.js",
+  "main": "bin/main.js",
   "repository": "https://github.com/X-Store-App/client",
   "author": "XStore",
   "license": "MIT",
