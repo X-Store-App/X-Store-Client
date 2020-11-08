@@ -9,7 +9,7 @@ app.whenReady().then(() => {
   const win = new BrowserWindow({
     title: 'XStore v' + app.getVersion(),
     webPreferences: {
-      preload: path.resolve(__dirname, 'preload.js'),
+      preload: path.resolve(process.cwd(), 'bin', 'preload.js'),
       nodeIntegration: false,
       enableRemoteModule: false
     }
