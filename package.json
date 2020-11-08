@@ -11,7 +11,7 @@
   "author": "XStore",
   "license": "MIT",
   "scripts": {
-    "start": "npm run build:webpack:main && run-p watch:webpack:renderer electron .",
+    "start": "npm run build:webpack:main && run-p watch:webpack:renderer watch:electron",
     "package": "run-p build:webpack package:electron:windows",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
@@ -21,6 +21,7 @@
     "build:webpack:test": "webpack --config webpack.config.js --mode=production --env.NODE_ENV=test",
     "build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
     "watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
+    "watch:electron": "electron .",
     "webpack:live": "webpack-dev-server --webpack.config.js",
     "lint": "eslint ./**"
   },
