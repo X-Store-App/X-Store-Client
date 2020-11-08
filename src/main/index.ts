@@ -18,6 +18,6 @@ app.whenReady().then(() => {
   win.loadURL(
     isDev === true
       ? 'http://localhost:3000'
-      : 'file://' + path.join(__dirname, 'bin', 'index.html')
+      : 'file://' + path.join(__dirname, 'index.html')
   )
 })
