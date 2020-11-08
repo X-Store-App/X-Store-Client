@@ -1,6 +1,7 @@
 import path from 'path'
 import { BrowserWindow, app, protocol } from 'electron'
 import resources from '../../resources.json'
+import isDev from 'electron-is-dev'
 
 app.whenReady().then(() => {
   protocol.registerFileProtocol('xstore', (request, callback) => {
@@ -14,4 +15,9 @@ app.whenReady().then(() => {
       enableRemoteModule: false
     }
   })
+  win.loadURL(
+    isDev === true
+      ? 'http://localhost:3000'
+      : path.join(__dirname, 'bin', 'index.html')
+  )
 })
