@@ -70,13 +70,13 @@ module.exports = [{
   module: {
     rules: [
       {
-        test: /\.(tj)s(x)$/,
+        test: /\.(t|j)sx$/,
         use: 'ts-loader',
         include: path.resolve(__dirname, 'src', 'interface'),
         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
-        test: /\.s(cs)ss$/,
+        test: /\.s(c|s)ss$/,
         use: 'sass-loader',
         exclude: path.resolve(__dirname, 'node_modules')
       }
