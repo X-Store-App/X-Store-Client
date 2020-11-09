@@ -62,7 +62,7 @@ module.exports = [{
   name: 'renderer',
   mode: process.env.NODE_ENV,
   target: 'electron-renderer',
-  entry: './src/main/index.ts',
+  entry: './src/interface/index.ts',
   output: {
     path: path.resolve(__dirname, 'bin'),
     filename: 'ui.js'
