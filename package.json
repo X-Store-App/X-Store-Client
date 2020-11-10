@@ -41,6 +41,7 @@
   "author": "dragonDScript",
   "license": "MIT",
   "bugs": {"url": "https://github.com/X-Store-App/client/issues"},
+  "private": true,
   "scripts": {
     "start": "npm run build:webpack:main && run-p watch:webpack:renderer watch:electron",
     "package:windows": "run-p build:webpack package:electron:windows",
