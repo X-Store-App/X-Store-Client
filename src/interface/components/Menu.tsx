@@ -1,7 +1,7 @@
 import React from 'react'
 
 import '../style/components/Menu.sass'
-import '../style/themes/dark.sass'
+import '../style/themes/light.sass'
 import '../style/common.sass'
 
 class Menu extends React.Component {
