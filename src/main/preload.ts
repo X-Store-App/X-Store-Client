@@ -1,5 +1,3 @@
-import electron, { contextBridge } from 'electron'
+import electron, { contextBridge, ipcRenderer } from 'electron'
 
-contextBridge.exposeInMainWorld('ipc', {
-  ipcRenderer: electron.ipcRenderer
-})
+contextBridge.exposeInMainWorld('ipcRenderer', ipcRenderer)
