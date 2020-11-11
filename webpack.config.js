@@ -76,8 +76,9 @@ module.exports = [{
         exclude: path.resolve(__dirname, 'node_modules')
       },
       {
-        test: /\.s(c|s)ss$/,
-        use: 'sass-loader',
+        test: /\.s(c|a)ss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+        include: path.resolve(__dirname, 'src', 'interface'),
         exclude: path.resolve(__dirname, 'node_modules')
       }
     ]
