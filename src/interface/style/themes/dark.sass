@@ -1,11 +1,32 @@
 $bg: #121212
-$accentBg = #121212  
+$accentBg: #121212  
+$contraryBg: #ffffff
 
-$text = white
+$buttonColor: #ffffff
+$buttonBackground: #242424
+$buttonBorder: #4e4e4e
+
+
+$buttonColorActive: #ffffff
+$buttonBackgroundActive: #6d6d6d
+$buttonBorderActive: #4e4e4e
+
+
+$text: white
 
 .bg
-  background-color: $darkBg
+  background-color: $bg
 .accentBg
   background-color: $bg
 .text
   color: $text
+.border.bbottom
+  border-bottom-color: $contraryBg
+.button
+  color: $buttonColor
+  border-color: $buttonBorder !important
+  background-color: $buttonBackground
+.button:active, .button:focus, button:hover
+  color: $buttonColorActive
+  border-color: $buttonBorderActive !important
+  background-color: $buttonBackgroundActive
