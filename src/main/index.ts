@@ -11,7 +11,7 @@ app.whenReady().then(() => {
     webPreferences: {
       preload: isDev === false
         ? path.resolve(__dirname, 'preload.js')
-        : path.resolve(process.cwd(), 'bin', 'preload.js'),
+        : path.resolve(process.cwd(), 'resources', 'app', 'bin', 'preload.js'),
       nodeIntegration: false,
       enableRemoteModule: false,
       contextIsolation: true
@@ -20,7 +20,7 @@ app.whenReady().then(() => {
   win.loadURL(
     isDev === true
       ? 'http://localhost:3000'
-      : 'file://' + path.join(__dirname, 'index.html')
+      : 'file://' + path.join(process.cwd(), 'resources', 'app', 'bin', 'index.html')
   )
   const template: Menu = Menu.buildFromTemplate([
     {
