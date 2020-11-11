@@ -80,6 +80,14 @@ module.exports = [{
         use: ['style-loader', 'css-loader', 'sass-loader'],
         include: path.resolve(__dirname, 'src', 'interface'),
         exclude: path.resolve(__dirname, 'node_modules')
+      },
+      {
+        test: /\.(png|jpe?g|gif)$/i,
+        use: [
+          {
+            loader: 'file-loader'
+          }
+        ]
       }
     ]
   },
