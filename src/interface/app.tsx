@@ -11,7 +11,7 @@ class App extends React.Component {
       <div className="App">
         <Menu />
         <Content>
-          <p>HOLA!</p>
+          null
         </Content>
       </div>
     )
