@@ -44,9 +44,9 @@
   "private": true,
   "scripts": {
     "start": "npm run build:webpack:main && run-p watch:webpack:renderer watch:electron",
-    "package:windows": "run-p build:webpack package:electron:windows",
-    "package:darwin": "run-p build:webpack package:electron:darwin",
-    "package:linux": "run-p build:webpack package:electron:linux",
+    "package:windows": "npm run build:webpack && npm run package:electron:windows",
+    "package:darwin": "npm run build:webpack && npm run package:electron:darwin",
+    "package:linux": "npm run build:webpack && npm run package:electron:linux",
     "package:electron:windows": "electron-builder -w",
     "package:electron:linux": "electron-builder -l",
     "package:electron:darwin": "electron-builder -m",
