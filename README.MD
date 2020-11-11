@@ -1,24 +1,15 @@
-# XStore Cross Platform client
+# 🖥 XStore Desktop
 
-## Technologies
+XStore Desktop is the easiest way to use XStore.
+You can check the current versions available [here](/releases).
 
-*This project uses the XStore's Node API. Check its repo [here.](https://github.com/X-Store-App/api-node) or (prefered way) you can download it from npm/yarn:*
-```bash
-npm i @xstoreapp/api
-# or
-yarn add @xstoreapp/api
-```
+## ⚠ Known Issues
 
-## Available scripts
+**This client is still very experimental.**
 
-```bash
-yarn start
-```
+- [🐛 BUGS](/docs/known_issues.md)
 
-```bash
-yarn package
-```
+## 📚 Docs
 
-```bash
-yarn webpack:bundle
-```
+- [🎁 RELEASE NOTES](/docs/release_notes.md)
+- [⛹ CONTRIBUTING](/docs/contributing.md)
