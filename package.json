@@ -34,7 +34,7 @@
   },
   "name": "xstore-electron-client",
   "productName": "XStore Desktop",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Client for XStore",
   "main": "bin/main.js",
   "repository": "https://github.com/X-Store-App/client",
