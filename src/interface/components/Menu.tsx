@@ -2,6 +2,8 @@ import React, { useState } from 'react'
 
 import '../style/components/Menu.sass'
 import '../style/common.sass'
+import '@xstoreapp/react-design/src/components/button.sass'
+import '@xstoreapp/react-design/src/components/input.sass'
 
 import { SearchInput } from '../components/SearchInput'
 
