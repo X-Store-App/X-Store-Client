@@ -10,10 +10,15 @@ class Menu extends React.Component {
     <div className="menu border bbottom bg text">
       <img alt="XStore logo"/>
       <section className="buttons">
-        <button className='button'>Explore</button>
-        <button className='button'>Search</button>
-        <button className='button'>Library</button>
-        <button className='button'>Account</button>
+        <section className="left">
+          <button className='button'>Explore</button>
+          <button className='button'>Search</button>
+          <button className='button'>Library</button>
+          <button className='button'>Account</button>
+        </section>
+        <section className="right">
+          <button className="button">Settings</button>
+        </section>
       </section>
     </div>)
   }
