@@ -6,7 +6,7 @@ import '../style/common.sass'
 
 import { SearchInput } from '../components/SearchInput'
 
-function Menu() {
+function Menu () {
   const [isVisible, setIsVisible] = useState(false)
   return (
     <div className="menu border bbottom bg text">
