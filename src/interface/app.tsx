@@ -10,9 +10,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Menu />
-        <Content>
-          null
-        </Content>
+        <Content />
       </div>
     )
   }
