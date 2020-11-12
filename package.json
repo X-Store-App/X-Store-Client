@@ -58,7 +58,7 @@
     "build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
     "build:webpack:renderer": "webpack --config webpack.config.js --mode=production --config-name renderer",
     "watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
-    "watch:electron": "electron .",
+    "watch:electron": "electron . --disable-gpu",
     "lint": "eslint ./**"
   },
   "devDependencies": {
