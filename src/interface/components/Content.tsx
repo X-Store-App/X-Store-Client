@@ -1,13 +1,15 @@
-import React from 'react'
+import React, { useState } from 'react'
 
 import '../style/components/Content.sass'
 import '../style/themes/light.sass'
 import '../style/common.sass'
 
-function Content (props: {}) {
+function Content (props: {frame: React.ReactNode}) {
   return (
     <div id="content">
-
+      {
+        props.frame
+      }
     </div>)
 }
 

@@ -10,7 +10,7 @@ class App extends React.Component {
     return (
       <div className="App">
         <Menu />
-        <Content />
+        <Content frame={<div></div>}/>
       </div>
     )
   }
