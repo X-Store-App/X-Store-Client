@@ -1,5 +1,6 @@
 {
 	"files": ["src/interface/index.ts"],
+	"include": ["src/interface/"],
 	"module": "es6",
 	"noImplicitAny": false,
 	"compilerOptions": {

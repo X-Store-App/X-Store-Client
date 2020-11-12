@@ -1,0 +1,17 @@
+.search {
+  width: auto;
+  height: auto;
+  padding: 10px;
+
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-gap: 5px;
+  margin-top: 10px;
+}
+.search:focus-within {
+  box-shadow: 0 0 6px 3px rgba(24, 24, 24, 0.336);
+}
+.search input {
+  border: 0;
+  outline: 0;
+}

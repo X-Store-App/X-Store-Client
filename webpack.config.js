@@ -98,7 +98,9 @@ module.exports = [{
     new HtmlWebpackPlugin({
       title: 'XStore',
       template: path.resolve(__dirname, 'src', 'interface', 'index.html'),
-      filename: 'index.html'
+      filename: 'index.html',
+      publicPath: './',
+      minify: true
     })
   ],
   devServer: {
