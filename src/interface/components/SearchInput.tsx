@@ -1,7 +1,6 @@
 import React from 'react'
 
 import '../style/components/SearchInput.scss'
-import '../style/themes/light.sass'
 import '../style/common.sass'
 
 class SearchInput extends React.Component {

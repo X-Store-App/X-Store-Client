@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import '../style/components/Menu.sass'
-import '../style/themes/light.sass'
 import '../style/common.sass'
 
 import { SearchInput } from '../components/SearchInput'

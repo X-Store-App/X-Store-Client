@@ -1,7 +1,6 @@
 import React, { useState } from 'react'
 
 import '../style/components/Content.sass'
-import '../style/themes/light.sass'
 import '../style/common.sass'
 
 function Content (props: {frame: React.ReactNode}) {
