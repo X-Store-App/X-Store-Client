@@ -1,11 +1,9 @@
 import path from 'path'
-import { BrowserWindow, app, protocol, Menu, dialog, shell } from 'electron'
+import { BrowserWindow, app, Menu, dialog, shell } from 'electron'
 import isDev from 'electron-is-dev'
 
 app.whenReady().then(() => {
-  protocol.registerFileProtocol('xstore', (request, callback) => {
-
-  })
+  app.setAsDefaultProtocolClient('xstore')
   const win: BrowserWindow = new BrowserWindow({
     title: 'XStore v' + app.getVersion(),
     webPreferences: {
