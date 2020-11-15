@@ -12,7 +12,8 @@ app.whenReady().then(() => {
         : path.resolve(process.cwd(), 'resources', 'app', 'bin', 'preload.js'),
       nodeIntegration: false,
       enableRemoteModule: false,
-      contextIsolation: true
+      contextIsolation: true,
+      sandbox: true
     }
   })
   win.loadURL(
