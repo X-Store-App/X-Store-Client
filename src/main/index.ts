@@ -1,6 +1,7 @@
 import path from 'path'
 import { BrowserWindow, app, Menu, dialog, shell } from 'electron'
 import isDev from 'electron-is-dev'
+import setupIpc from './ipc'
 
 app.whenReady().then(() => {
   app.setAsDefaultProtocolClient('xstore')
@@ -73,4 +74,9 @@ app.whenReady().then(() => {
   ])
 
   Menu.setApplicationMenu(template)
+
+  // IPC
+  win.webContents.on('did-finish-load', () => {
+    setupIpc()
+  })
 })
