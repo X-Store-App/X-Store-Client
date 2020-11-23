@@ -26,7 +26,7 @@ module.exports = [{
   target: 'electron-main',
   externals: ['fs-extra', 'electron', 'path'],
   output: {
-    filename: 'preload.js',
+    filename: '[name].[hash].js',
     path: path.resolve(__dirname, 'bin'),
     libraryTarget: 'umd'
   }
@@ -37,7 +37,7 @@ module.exports = [{
   entry: './src/main/index.ts',
   output: {
     path: path.resolve(__dirname, 'bin'),
-    filename: 'main.js'
+    filename: '[name].[hash].js'
   },
   node: {
     __dirname: true
@@ -65,7 +65,7 @@ module.exports = [{
   entry: './src/interface/index.ts',
   output: {
     path: path.resolve(__dirname, 'bin'),
-    filename: 'ui.js'
+    filename: '[name].[hash].js'
   },
   module: {
     rules: [
