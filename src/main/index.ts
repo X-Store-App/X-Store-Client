@@ -11,10 +11,12 @@ app.whenReady().then(() => {
       preload: isDev === true
         ? path.resolve(process.cwd(), 'bin', 'preload.js')
         : path.resolve(process.cwd(), 'resources', 'app', 'bin', 'preload.js'),
-      nodeIntegration: false,
-      enableRemoteModule: false,
+      nodeIntegration: isDev,
+      enableRemoteModule: isDev,
       contextIsolation: true,
-      sandbox: true
+      sandbox: true,
+      webSecurity: !isDev,
+      devTools: isDev
     }
   })
   win.loadURL(
