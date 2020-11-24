@@ -57,7 +57,7 @@ module.exports = [{
       '.js', '.ts', '.jsx', '.tsx'
     ],
     alias: {
-      API: path.resolve(__dirname, 'src', 'interface', 'api', 'index')
+      API: path.resolve(__dirname, 'src', 'common', 'api', 'index')
     }
   }
 },
@@ -99,7 +99,7 @@ module.exports = [{
   resolve: {
     extensions: ['.js', '.ts', '.tsx', '.jsx'],
     alias: {
-      API: path.resolve(__dirname, 'src', 'interface', 'api', 'index')
+      API: path.resolve(__dirname, 'src', 'common', 'api', 'index')
     }
   },
   plugins: [

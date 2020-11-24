@@ -1,4 +1,4 @@
-import { CrossPlatformEventEmitter } from '../../common/utils/CrossPlatformEventEmitter'
+import { CrossPlatformEventEmitter } from '../utils/CrossPlatformEventEmitter'
 
 const StaticEmitter = new CrossPlatformEventEmitter()
 StaticEmitter.on('hola', () => {
