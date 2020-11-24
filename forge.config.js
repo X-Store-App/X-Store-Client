@@ -1,9 +1,8 @@
 const config = {
   packagerConfig: {
-    ignore: [
-      /\*/,
-      /!bin/
-    ]
+    ignore: (file) => {
+      return file === 'bin'
+    }
   },
   makers: [
     {
