@@ -5,9 +5,6 @@ const config = {
     ignore: (file) => {
       if (!file) return false
       const files = ['bin', 'package.json', 'LICENSE']
-      console.log(file)
-      console.log(path.basename(file))
-      console.log(files.includes(path.basename(file)))
       return !files.includes(path.basename(file))
     }
   },
