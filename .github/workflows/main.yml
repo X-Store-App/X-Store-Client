@@ -14,4 +14,4 @@ jobs:
         run: npm i
 
       - name: Build and deploy
-        run: npm run package:linux
+        run: npm run pack
