@@ -15,3 +15,5 @@ jobs:
 
       - name: Build and deploy
         run: npm run pack
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
