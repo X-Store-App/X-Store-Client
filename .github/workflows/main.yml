@@ -14,6 +14,6 @@ jobs:
         run: npm i
 
       - name: Build and deploy
-        run: npm run pack
+        run: npm run package
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
