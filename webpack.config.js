@@ -55,7 +55,10 @@ module.exports = [{
   resolve: {
     extensions: [
       '.js', '.ts', '.jsx', '.tsx'
-    ]
+    ],
+    alias: {
+      API: path.resolve(__dirname, 'src', 'interface', 'api', 'index')
+    }
   }
 },
 {
@@ -94,7 +97,10 @@ module.exports = [{
     ]
   },
   resolve: {
-    extensions: ['.js', '.ts', '.tsx', '.jsx']
+    extensions: ['.js', '.ts', '.tsx', '.jsx'],
+    alias: {
+      API: path.resolve(__dirname, 'src', 'interface', 'api', 'index')
+    }
   },
   plugins: [
     new HtmlWebpackPlugin({
