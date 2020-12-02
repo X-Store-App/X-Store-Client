@@ -13,10 +13,10 @@ class SearchInput extends React.Component {
 
   render () {
     return (
-    <div className="search" style={{ width: this.props.width, height: this.props.height }}>
-      <img src='../static/search-black-18dp.svg' alt="search material design google"/>
-      <input type="text" value={this.props.value} placeholder={this.props.placeholder}/>
-    </div>)
+      <div className="search" style={{ width: this.props.width, height: this.props.height }}>
+  			<img src='../static/search-black-18dp.svg' alt="search material design google"/>
+  			<input type="text" value={this.props.value} placeholder={this.props.placeholder}/>
+  		</div>)
   }
 }
 
