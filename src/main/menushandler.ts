@@ -45,7 +45,7 @@ function setupMenus () {
 					click (mi, bw) {
 						dialog.showMessageBox(bw, {
 							title: 'XStore Desktop',
-							message: 'Made by dragonDScript\nLicensed under the MIT license\nMade with open source techonologies like React.js, Electron.js and others',
+							message: 'Made by dragonDScript\nLicensed under the MIT license',
 							type: 'info',
 							buttons: ['OK']
 						})
