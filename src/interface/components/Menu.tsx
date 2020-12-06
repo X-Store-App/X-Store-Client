@@ -7,11 +7,13 @@ import '@xstoreapp/react-design/src/components/input.sass'
 
 import { SearchInput } from '../components/SearchInput'
 
+import logo from '../static/xstore.png'
+
 function Menu () {
 	const [isVisible, setIsVisible] = useState(false)
 	return (
 		<div className="menu border bbottom bg text">
-			<img alt="XStore logo" src="../static/xstore.png"/>
+			<img alt="XStore logo" src={logo}/>
 			<section className="buttons">
 				<section className="left">
 					<button className='button'>Explore</button>
