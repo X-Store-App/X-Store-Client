@@ -1,30 +1,64 @@
 import electron from 'electron'
-import { Menu, ipcMain, dialog } from 'electron'
-import api from 'API'
+import { Menu, ipcMain, dialog, app } from 'electron'
+
+import openExternal from './openexternal'
 
 function setupMenus () {
 	const menu: electron.MenuItemConstructorOptions[] = [
 		{
-			label: 'File',
+			label: 'XStore',
 			submenu: [
 				{
-					label: 'Settings',
+					label: 'About XStore',
+					click (mi, bw) {
+						dialog.showMessageBox(bw, {
+							title: 'XStore Desktop',
+							message: 'Made by dragonDScript\nLicensed under the MIT license',
+							type: 'info',
+							buttons: ['OK']
+						})
+					}
+				},
+				{
+					label: 'Preferences',
 					submenu: [
+						{
+							label: '',
+							enabled: false
+						},
+						{
+							type: 'separator'
+						},
 						{
 							label: 'Open Settings file',
 							click () {
-								electron.shell.openPath(
-									electron.app.getPath('appData') + '/.xstore/client/settings.json'
-								)
-							}
+								openExternal(app.getPath('appData') + '/.xstore/client/settings.json')
+							},
+							accelerator: 'CmdOrCtrl+,'
 						}
 					]
+				},
+				{
+					role: 'services',
+					enabled: process.platform === 'darwin'
 				},
 				{
 					type: 'separator'
 				},
 				{
-					role: 'quit'
+					role: 'quit',
+					label: 'Quit XStore'
+				}
+			]
+		},
+		{
+			label: 'File',
+			submenu: [
+				{
+					label: 'Save Logs'
+				},
+				{
+					label: 'Open developer tools'
 				}
 			]
 		},
@@ -35,20 +69,54 @@ function setupMenus () {
 			role: 'viewMenu'
 		},
 		{
+			label: 'Online',
+			submenu: [
+				{
+					label: 'Store'
+				},
+				{
+					label: 'Library'
+				},
+				{
+					label: 'Profile'
+				},
+				{
+					type: 'separator'
+				},
+				{
+					label: 'Login...'
+				},
+				{
+					label: 'Register...'
+				}
+			]
+		},
+		{
 			role: 'windowMenu'
 		},
 		{
 			label: 'Help',
 			submenu: [
 				{
-					label: 'About',
-					click (mi, bw) {
-						dialog.showMessageBox(bw, {
-							title: 'XStore Desktop',
-							message: 'Made by dragonDScript\nLicensed under the MIT license',
-							type: 'info',
-							buttons: ['OK']
-						})
+					label: 'Website',
+					click () {
+						openExternal('https://X-Store-App.github.io')
+					}
+				},
+				{
+					label: 'Discord',
+					click: () => openExternal('https://discord.gg/ewBsKZB75N')
+				},
+				{
+					label: 'GitHub',
+					click() {
+						openExternal('https://github.com/X-Store-App/client')
+					}
+				},
+				{
+					label: 'Issues',
+					click () {
+						openExternal('https://github.com/X-Store-App/client/issues')
 					}
 				}
 			]
