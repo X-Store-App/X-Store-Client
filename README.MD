@@ -1,15 +1,15 @@
 # 🖥 XStore Desktop
 
 XStore Desktop is the easiest way to use XStore.
-You can check the current versions available [here](/releases).
+You can check the current versions available [here](https://github.com/X-Store-App/client/releases).
 
 ## ⚠ Known Issues
 
 **This client is still very experimental.**
 
-- [🐛 BUGS](/docs/known_issues.md)
+- [🐛 BUGS](https://github.com/X-Store-App/client/blob/main/docs/KNOWN_ISSUES.md)
 
 ## 📚 Docs
 
-- [🎁 RELEASE NOTES](/docs/release_notes.md)
-- [⛹ CONTRIBUTING](/docs/contributing.md)
+- [🎁 RELEASE NOTES](https://github.com/X-Store-App/client/blob/main/docs/RELEASE_NOTES.MD)
+- [⛹ CONTRIBUTING](https://github.com/X-Store-App/client/blob/main/docs/CONTRIBUTING.MD)
