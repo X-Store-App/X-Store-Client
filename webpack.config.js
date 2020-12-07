@@ -68,7 +68,7 @@ module.exports = [{
 	entry: './src/interface/index.ts',
 	output: {
 		path: path.resolve(__dirname, 'bin'),
-		filename: 'renderer.[hash].js'
+		filename: 'renderer.js'
 	},
 	module: {
 		rules: [
