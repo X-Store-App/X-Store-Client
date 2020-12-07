@@ -4,7 +4,7 @@ const config = {
 	packagerConfig: {
 		ignore: (file) => {
 			if (!file) return false
-			const files = ['bin', 'package.json', 'LICENSE']
+			const files = ['bin', 'package.json', 'LICENSE', 'bin/index.html', 'main.js', 'preload.js', 'renderer.js']
 			return !files.includes(path.basename(file))
 		}
 	},
