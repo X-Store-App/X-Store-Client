@@ -7,9 +7,9 @@ You can check the current versions available [here](https://github.com/X-Store-A
 
 **This client is still very experimental.**
 
-- [🐛 BUGS](https://github.com/X-Store-App/client/blob/main/docs/KNOWN_ISSUES.md)
+- [🐛 BUGS](https://github.com/X-Store-App/client/blob/dev/docs/KNOWN_ISSUES.md)
 
 ## 📚 Docs
 
-- [🎁 RELEASE NOTES](https://github.com/X-Store-App/client/blob/main/docs/RELEASE_NOTES.MD)
-- [⛹ CONTRIBUTING](https://github.com/X-Store-App/client/blob/main/docs/CONTRIBUTING.MD)
+- [🎁 RELEASE NOTES](https://github.com/X-Store-App/client/blob/dev/docs/RELEASE_NOTES.MD)
+- [⛹ CONTRIBUTING](https://github.com/X-Store-App/client/blob/dev/docs/CONTRIBUTING.MD)
