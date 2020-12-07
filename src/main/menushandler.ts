@@ -56,9 +56,6 @@ function setupMenus () {
 			submenu: [
 				{
 					label: 'Save Logs'
-				},
-				{
-					label: 'Open developer tools'
 				}
 			]
 		},
@@ -109,7 +106,7 @@ function setupMenus () {
 				},
 				{
 					label: 'GitHub',
-					click() {
+					click () {
 						openExternal('https://github.com/X-Store-App/client')
 					}
 				},
