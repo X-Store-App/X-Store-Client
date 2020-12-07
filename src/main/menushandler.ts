@@ -1,10 +1,9 @@
-import electron from 'electron'
-import { Menu, ipcMain, dialog, app } from 'electron'
+import { Menu, ipcMain, dialog, app, MenuItemConstructorOptions } from 'electron'
 
 import openExternal from './openexternal'
 
 function setupMenus () {
-	const menu: electron.MenuItemConstructorOptions[] = [
+	const menu: MenuItemConstructorOptions[] = [
 		{
 			label: 'XStore',
 			submenu: [
