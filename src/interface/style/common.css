@@ -1,0 +1,21 @@
+@import 'https://fonts.googleapis.com/css2?family=Open+Sans&display=swap'; /*Loading stuff from outside, specially if you are talking about a desktop app is not recommended. This is going to change*/
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  width: 100vw;
+  height: 100vh;
+
+  padding: 0;
+  margin: 0;
+}
+#root {
+  width: 100%;
+  height: 100%;
+}
+.App {
+  width: 100%;
+  height: 100%;
+  
+  display: grid;
+  grid-template-rows: auto 1fr;
+}

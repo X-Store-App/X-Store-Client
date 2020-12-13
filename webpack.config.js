@@ -79,12 +79,19 @@ module.exports = [{
 				exclude: path.resolve(__dirname, 'node_modules')
 			},
 			{
-				test: /\.s(a|c)ss$/,
-				use: ['style-loader', 'css-loader', 'sass-loader']
-			},
-			{
 				test: /\.css$/,
-				use: ['style-loader', 'css-loader']
+				use: ['style-loader', 'css-loader', {
+					loader: 'postcss-loader',
+					options: {
+						postcssOptions: {
+							plugins: [
+								[
+									'postcss-preset-env'
+								]
+							]
+						}
+					}
+				}]
 			},
 			{
 				test: /\.(png|jpe?g|gif)$/i,
