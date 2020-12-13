@@ -34,6 +34,7 @@
     "@types/electron": "^1.6.10",
     "@typescript-eslint/eslint-plugin": "^4.6.0",
     "@typescript-eslint/parser": "^4.6.0",
+    "@webpack-cli/serve": "^1.1.0",
     "babel-loader": "^8.1.0",
     "css-loader": "^5.0.1",
     "electron": "^11.1.0",
@@ -56,7 +57,7 @@
     "svg-loader": "0.0.2",
     "ts-loader": "^8.0.10",
     "typescript": "^4.0.3",
-    "webpack": "^4.44.2",
+    "webpack": "^5.10.1",
     "webpack-cli": "^3.3.12",
     "webpack-dev-server": "^3.11.0",
     "webpack-html-plugin": "^0.1.1"
