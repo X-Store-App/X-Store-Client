@@ -51,14 +51,6 @@ function setupMenus () {
 			]
 		},
 		{
-			label: 'File',
-			submenu: [
-				{
-					label: 'Save Logs'
-				}
-			]
-		},
-		{
 			role: 'editMenu'
 		},
 		{
