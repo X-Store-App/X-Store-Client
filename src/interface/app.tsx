@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-import './style/common.sass'
+import './style/common.css'
 
 class App extends React.Component {
 	render () {
