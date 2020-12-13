@@ -1,5 +1,5 @@
 import path from 'path'
-import { BrowserWindow, app, Menu, dialog, shell } from 'electron'
+import { BrowserWindow, app } from 'electron'
 import isDev from 'electron-is-dev'
 import setupIpc from './ipc'
 import setupMenus from './menushandler'

@@ -1,4 +1,4 @@
-import { shell, app } from 'electron'
+import { shell } from 'electron'
 
 export default (url: string) => {
 	shell.openPath(

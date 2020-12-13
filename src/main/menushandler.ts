@@ -1,4 +1,4 @@
-import { Menu, ipcMain, dialog, app, MenuItemConstructorOptions } from 'electron'
+import { Menu, dialog, app, MenuItemConstructorOptions } from 'electron'
 
 import openExternal from './openexternal'
 
