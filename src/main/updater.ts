@@ -1,11 +1,10 @@
-import { dialog, autoUpdater } from 'electron'
+import { dialog, autoUpdater, ipcMain } from 'electron'
 import log from 'electron-log'
 
 function update () {
 	autoUpdater.setFeedURL({
 		url: 'https://github.com/X-Store-App/client'
 	})
-	autoUpdater.checkForUpdates()
 
 	autoUpdater.on('error', (err: Error) => {
 		if (err) throw err
@@ -29,6 +28,8 @@ function update () {
 	autoUpdater.on('update-not-available', () => {
 		log.info('An update is not available')
 	})
+
+	autoUpdater.checkForUpdates()
 }
 
 export default update

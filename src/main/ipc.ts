@@ -1,6 +1,10 @@
 import { ipcMain } from 'electron'
-function setupIpc ():void {
+import update from './updater'
 
+function setupIpc ():void {
+	ipcMain.on('check-updates', () => {
+		update()
+	})
 }
 
 export default setupIpc
