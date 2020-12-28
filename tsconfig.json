@@ -1,5 +1,5 @@
 {
-	"files": ["src/interface/index.ts"],
+	"files": ["src/interface/index.ts", "src/types/global.d.ts"],
 	"include": ["src/interface/"],
 	"module": "es6",
 	"noImplicitAny": false,
