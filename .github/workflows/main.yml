@@ -25,7 +25,7 @@ jobs:
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       - name: Zip (Win32)
-        if: ${{ matrix.os }} == 'linux' || ${{ matrix.os }} == 'macos'
+        if: ${{ matrix.os }} == 'windows'
         run: tar.exe -a -c -f out/build.zip out/*
       - name: Upload Release Asset (Win32)
         if: ${{ matrix.os }} == 'windows'
@@ -36,7 +36,7 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./out/build.zip
           asset_name: xstore-desktop-${{ matrix.os }}
-          asset_content_type: application/gzip
+          asset_content_type: application/zip
 
       - name: Zip (*nix)
         if: ${{ matrix.os }} == 'linux' || ${{ matrix.os }} == 'macos'
@@ -50,4 +50,4 @@ jobs:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./out/build.tar.gz
           asset_name: xstore-desktop-${{ matrix.os }}
-          asset_content_type: application/zip
+          asset_content_type: application/gzip
