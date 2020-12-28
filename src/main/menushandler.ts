@@ -57,29 +57,6 @@ function setupMenus () {
 			role: 'viewMenu'
 		},
 		{
-			label: 'Online',
-			submenu: [
-				{
-					label: 'Store'
-				},
-				{
-					label: 'Library'
-				},
-				{
-					label: 'Profile'
-				},
-				{
-					type: 'separator'
-				},
-				{
-					label: 'Login...'
-				},
-				{
-					label: 'Register...'
-				}
-			]
-		},
-		{
 			role: 'windowMenu'
 		},
 		{
