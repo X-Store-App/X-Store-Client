@@ -8,15 +8,15 @@ class Menu extends React.Component {
 		return (
 			<div className="menu">
 				<section>
-					<a href="" draggable="false">
+					<a href="" draggable="false" className="icon">
 						<img draggable="false" src={Icon}/>
 					</a>
 				</section>
 				<section className="right">
-					<a href="">Home</a>
-					<a href="#">Search</a>
-					<a href="">Library</a>
-					<a href="">Account</a>
+					<a href="" className="button">Home</a>
+					<a href="#" className="button">Search</a>
+					<a href="" className="button">Library</a>
+					<a href="" className="button">Account</a>
 				</section>
 			</div>
 		)
