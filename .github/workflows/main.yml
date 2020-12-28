@@ -24,30 +24,31 @@ jobs:
         run: npm run package
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
       - name: Zip (Win32)
-        if: ${{ matrix.os }} == 'windows'
+        if: runner.os == 'windows'
         run: tar.exe -a -c -f out/build.zip out/*
       - name: Upload Release Asset (Win32)
-        if: ${{ matrix.os }} == 'windows'
+        if: runner.os == 'windows'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./out/build.zip
-          asset_name: xstore-desktop-${{ matrix.os }}
+          asset_name: xstore-desktop-${{ runner.os }}
           asset_content_type: application/zip
 
       - name: Zip (*nix)
-        if: ${{ matrix.os }} == 'linux' || ${{ matrix.os }} == 'macos'
+        if: runner.os == 'linux' || runner.os == 'macos'
         run: tar -zcvf ./out/build.tar.gz out/*
       - name: Upload Release Asset (*nix)
-        if: ${{ matrix.os }} == 'linux' || ${{ matrix.os }} == 'macos'
+        if: runner.os == 'linux' || runner.os == 'macos'
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
           asset_path: ./out/build.tar.gz
-          asset_name: xstore-desktop-${{ matrix.os }}
+          asset_name: xstore-desktop-${{ runner.os }}
           asset_content_type: application/gzip
