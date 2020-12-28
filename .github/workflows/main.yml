@@ -36,7 +36,7 @@ jobs:
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./out/build.zip
-          asset_name: xstore-desktop-${{ runner.os }}
+          asset_name: xstore-desktop-${{ runner.os }}.zip
           asset_content_type: application/zip
 
       - name: Zip (*nix)
@@ -50,5 +50,5 @@ jobs:
         with:
           upload_url: ${{ github.event.release.upload_url }}
           asset_path: ./out/build.tar.gz
-          asset_name: xstore-desktop-${{ runner.os }}
+          asset_name: xstore-desktop-${{ runner.os }}.tar.gz
           asset_content_type: application/gzip
