@@ -12,7 +12,7 @@ This project uses [Contributor Covenant](https://www.contributor-covenant.org/) 
 
 To start, clone this repo:
 ```
-git clone https://github.com/X-Store-App/client
+git clone https://github.com/X-Store-App/client.git
 cd client
 ```
 
