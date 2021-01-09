@@ -18,7 +18,6 @@
     "package": "npm run build:webpack && electron-forge package",
     "make": "electron-forge make",
     "build:webpack": "webpack --config webpack.config.js --mode=production",
-    "build:webpack:test": "webpack --config webpack.config.js --mode=production --env.NODE_ENV=test",
     "build:webpack:main": "webpack --config webpack.config.js --mode=development --config-name preload && webpack --mode=development --config-name main",
     "build:webpack:renderer": "webpack --config webpack.config.js --mode=production --config-name renderer",
     "watch:webpack:renderer": "webpack-dev-server --config webpack.config.js --mode=development --config-name renderer",
