@@ -1,5 +1,5 @@
-import { Menu, dialog, app, MenuItemConstructorOptions } from 'electron'
-
+import { Menu, dialog, MenuItemConstructorOptions } from 'electron'
+import store from './store'
 import openExternal from './openexternal'
 
 function setupMenus () {
@@ -22,18 +22,10 @@ function setupMenus () {
 					label: 'Preferences',
 					submenu: [
 						{
-							label: '',
-							enabled: false
-						},
-						{
-							type: 'separator'
-						},
-						{
-							label: 'Open Settings file',
-							click () {
-								openExternal(app.getPath('appData') + '/.xstore/client/settings.json')
-							},
-							accelerator: 'CmdOrCtrl+,'
+							label: 'Auto update',
+							type: 'checkbox',
+							click: (mi) => store.set('auto-updates', mi.checked),
+							checked: Boolean(store.get('auto-updates'))
 						}
 					]
 				},

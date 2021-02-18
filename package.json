@@ -66,7 +66,8 @@
     "@xstoreapp/react-design": "^0.2.0",
     "electron-is-dev": "1.2.0",
     "electron-log": "^4.3.0",
-    "electron-squirrel-startup": "^1.0.0"
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^7.0.2"
   },
   "config": {
     "forge": "./forge.config.js"
